@@ -32,6 +32,7 @@ def middleware_init(app):
             response = await call_next(request)
             return response
         try:
+            print(3444)
             start_time = time.time()
             response = await call_next(request)
             content_type = response.headers.get('content-type', '')
