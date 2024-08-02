@@ -47,3 +47,8 @@ class OeOpenAccountServer:
         await asyncio.sleep(60)
         res = await OpAssetGroupAccount.filter(id__in=ids).annotate(count=Count('asset_group_account_details')).values()
         return ResponseModel(data=res)
+
+    @AdminRouter.get('/dev_op', description='1232133434')
+    async def dev_op(self):
+        await asyncio.sleep(1000)
+        return JSONResponse({"code": 0})
