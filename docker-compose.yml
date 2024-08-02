@@ -5,9 +5,9 @@ services:
     build: .
     image: fastapi_demo
     container_name: fastapi_demo_web
-    command: uvicorn main:app --host 0.0.0.0 --port 9000
+    command: python main.py
     volumes:
-      - /home/wenmingshuo/project/logs:/app/logs:rw
+      - /home/wenmingshuo/project/fast_demo/logs:/app/logs:rw
     restart: always
     network_mode: host
 
