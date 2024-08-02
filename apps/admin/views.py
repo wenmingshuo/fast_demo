@@ -77,3 +77,8 @@ class OeOpenAccountServer:
     async def dev_op_6(self):
         await asyncio.sleep(1000)
         return JSONResponse({"code": 0})
+
+    @AdminRouter.get('/dev_op_7', description='4321321323123')
+    async def dev_op_7(self):
+        await asyncio.sleep(1000)
+        return JSONResponse({"code": 0})
